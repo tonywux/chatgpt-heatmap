@@ -1,3 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-    console.log('ChatGPT Conversation Exporter installed');
+    console.log('ChatGPT Heatmap Extension installed');
 });

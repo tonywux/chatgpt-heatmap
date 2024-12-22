@@ -1,23 +1,23 @@
 {
-    "manifest_version": 3,
-    "name": "ChatGPT Conversation Fetcher",
-    "version": "1.0",
-    "description": "Export ChatGPT conversations as JSON",
-    "permissions": [
+  "manifest_version": 3,
+  "name": "ChatGPT Conversation Heatmap",
+  "version": "1.0",
+  "description": "Generate a heatmap of your ChatGPT conversations",
+  "permissions": [
       "storage",
       "activeTab",
-      "downloads"
-    ],
-    "host_permissions": [
+      "downloads",
+      "unlimitedStorage"
+  ],
+  "host_permissions": [
       "https://chatgpt.com/*",
       "https://chat.openai.com/*"
-    ],
-    "action": {
+  ],
+  "action": {
       "default_popup": "/popup/popup.html",
       "default_icon": "/images/icon.png"
-    },
-    "background": {
+  },
+  "background": {
       "service_worker": "background.js"
-    }
   }
-  
+}
