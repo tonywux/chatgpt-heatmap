@@ -1,6 +1,75 @@
 # chatgpt-heatmap
 
-<img src="./images/screenshot.png" width="600" alt="screenshot"/>
+## 工具截图 Screenshot
+
+<img src="./images/screenshot.png" width="300" alt="screenshot"/>
+
+<img src="./images/screenshot_result.png" width="300" alt="screenshot_result"/>
+
+
+## 简介 Introduction
+
+本工具支持导出 ChatGPT 个人账户的两种对话数据
+This tool supports exporting two types of conversation data from your ChatGPT account:
+
+- 原始数据：即 ChatGPT 的对话列表数据
+- 处理后的数据：按日期、星期、周数进行简单汇总统计后的数据
+
+- Raw Data: The raw conversation list data from ChatGPT
+- Processed Data: The processed data summarized by date, day of the week, and week number
+
+### 原始数据（Raw Data）
+
+```json
+{
+  "conversations": [
+    {
+      "async_status": null,
+      "conversation_origin": null,
+      "conversation_template_id": null,
+      "create_time": "2024-12-22T07:37:07.270530Z",
+      "current_node": null,
+      "gizmo_id": null,
+      "id": "xxx",
+      "is_archived": false,
+      "is_starred": null,
+      "is_unread": false,
+      "mapping": null,
+      "safe_urls": [],
+      "snippet": null,
+      "title": "xxx",
+      "update_time": "2024-12-22T07:58:21.257454Z",
+      "workspace_id": null
+    },
+  ],
+  "expectedTotal": xxxx,
+  "exportDate": "2024-12-22T09:23:56.397Z",
+  "failedOffsets": [],
+  "isComplete": true,
+  "totalCount": xxxx
+}
+```
+
+### 处理后的数据（Processed Data）
+
+```json
+[
+  {
+    "count": xxxx,
+    "date": "2024-09-17",
+    "dayOfWeek": 2,
+    "weekNumber": 38
+  },
+  {
+    "count": xxxx,
+    "date": "2024-09-18",
+    "dayOfWeek": 3,
+    "weekNumber": 38
+  },
+]
+```
+
+---
 
 ## 中文使用指引 (English Guides below)
 
@@ -83,3 +152,9 @@
 
 1. Click the button to download data
 2. The data will be downloaded as a JSON file
+
+---
+
+## Roadmap
+
+- 支持直接制作热力图（heatmap）

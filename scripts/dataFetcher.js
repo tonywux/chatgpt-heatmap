@@ -49,7 +49,7 @@ class DataFetcher {
                 
                 utils.updateStatus(`${currentBatch.start}-${currentBatch.end} records fetched successfully.`);
                 
-                if (data.items.length < limit || offset + limit >= 500) {
+                if (data.items.length < limit || offset + limit >= data.total) {
                     hasMore = false;
                 } else {
                     offset += limit;
