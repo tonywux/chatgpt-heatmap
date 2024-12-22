@@ -1,24 +1,20 @@
 # chatgpt-heatmap
 
-## 工具截图 Screenshot
+## Screenshot
 
 <img src="./images/screenshot.png" width="300" alt="screenshot"/>
 
 <img src="./images/screenshot_result.png" width="300" alt="screenshot_result"/>
 
 
-## 简介 Introduction
+## Introduction
 
-本工具支持导出 ChatGPT 个人账户的两种对话数据
 This tool supports exporting two types of conversation data from your ChatGPT account:
-
-- 原始数据：即 ChatGPT 的对话列表数据
-- 处理后的数据：按日期、星期、周数进行简单汇总统计后的数据
 
 - Raw Data: The raw conversation list data from ChatGPT
 - Processed Data: The processed data summarized by date, day of the week, and week number
 
-### 原始数据（Raw Data）
+### Raw Data
 
 ```json
 {
@@ -30,38 +26,38 @@ This tool supports exporting two types of conversation data from your ChatGPT ac
       "create_time": "2024-12-22T07:37:07.270530Z",
       "current_node": null,
       "gizmo_id": null,
-      "id": "xxx",
+      "id": "xxx", // This is the id of the conversation, I'm not sure if I can get the details of the conversation by using this id. Might be useful for future features.
       "is_archived": false,
       "is_starred": null,
       "is_unread": false,
       "mapping": null,
       "safe_urls": [],
       "snippet": null,
-      "title": "xxx",
+      "title": "xxx", // This is the title of the conversation.
       "update_time": "2024-12-22T07:58:21.257454Z",
       "workspace_id": null
     },
   ],
-  "expectedTotal": xxxx,
+  "expectedTotal": 1000,
   "exportDate": "2024-12-22T09:23:56.397Z",
   "failedOffsets": [],
   "isComplete": true,
-  "totalCount": xxxx
+  "totalCount": 1000
 }
 ```
 
-### 处理后的数据（Processed Data）
+### Processed Data
 
 ```json
 [
   {
-    "count": xxxx,
+    "count": 23,
     "date": "2024-09-17",
     "dayOfWeek": 2,
     "weekNumber": 38
   },
   {
-    "count": xxxx,
+    "count": 2,
     "date": "2024-09-18",
     "dayOfWeek": 3,
     "weekNumber": 38
@@ -71,49 +67,7 @@ This tool supports exporting two types of conversation data from your ChatGPT ac
 
 ---
 
-## 中文使用指引 (English Guides below)
-
-### 如何使用
-
-1. 在 Chrome 浏览器中打开 ChatGPT
-2. 打开扩展程序
-3. 输入您的 bearer token
-4. 点击按钮导出您的对话记录
-5. 等待数据获取完成 (可能需要几分钟，请勿关闭扩展程序)
-6. 原始数据和处理后的数据将被获取并显示
-
-### 安全提示
-
-1. 这个 token 只能访问您的对话数据
-2. 当您登出 ChatGPT 时，token 会自动过期
-3. 如果需要，您可以在导出后登出 ChatGPT 以确保之前的 token 失效
-
-### 如何获取bearer token
-
-1. 在 Chrome 浏览器中打开 ChatGPT
-2. 打开开发者工具
-3. 切换到 Network（网络）标签页
-4. 找到发送到`https://chatgpt.com/backend-api/conversations?xxx`的请求
-5. 复制`Authorization`请求头的值，不要包含'Bearer'
-6. 将其粘贴到扩展程序的输入框中
-
-> 注意：如果您的 token 过期，您需要重新获取
-
-![获取bearer token](./images/get-bearer-token.png)
-
-### 如何清除数据
-
-1. 点击清除数据按钮
-2. 在弹出窗口中确认操作
-
-### 如何下载数据
-
-1. 点击下载数据按钮
-2. 数据将以JSON文件格式下载
-
----
-
-## English Guides
+## English Guides (中文使用指引见下文)
 
 ### How to use
 
@@ -152,6 +106,53 @@ This tool supports exporting two types of conversation data from your ChatGPT ac
 
 1. Click the button to download data
 2. The data will be downloaded as a JSON file
+
+---
+
+## 中文使用指引
+
+本工具支持导出 ChatGPT 个人账户的两种对话数据
+
+- 原始数据：即 ChatGPT 的对话列表数据
+- 处理后的数据：按日期、星期、周数进行简单汇总统计后的数据
+
+### 如何使用
+
+1. 在 Chrome 浏览器中打开 ChatGPT
+2. 打开扩展程序
+3. 输入您的 bearer token
+4. 点击按钮导出您的对话记录
+5. 等待数据获取完成 (可能需要几分钟，请勿关闭扩展程序)
+6. 原始数据和处理后的数据将被获取并显示
+
+### 安全提示
+
+1. 这个 token 只能访问您的对话数据
+2. 当您登出 ChatGPT 时，token 会自动过期
+3. 如果需要，您可以在导出后登出 ChatGPT 以确保之前的 token 失效
+
+### 如何获取bearer token
+
+1. 在 Chrome 浏览器中打开 ChatGPT
+2. 打开开发者工具
+3. 切换到 Network（网络）标签页
+4. 找到发送到`https://chatgpt.com/backend-api/conversations?xxx`的请求
+5. 复制`Authorization`请求头的值，不要包含'Bearer'
+6. 将其粘贴到扩展程序的输入框中
+
+> 注意：如果您的 token 过期，您需要重新获取
+
+![获取bearer token](./images/get-bearer-token.png)
+
+### 如何清除数据
+
+1. 点击清除数据按钮
+2. 在弹出窗口中确认操作
+
+### 如何下载数据
+
+1. 点击下载数据按钮
+2. 数据将以JSON文件格式下载
 
 ---
 
