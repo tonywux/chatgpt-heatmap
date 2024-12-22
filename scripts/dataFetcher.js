@@ -13,7 +13,15 @@ class DataFetcher {
 
         while (hasMore) {
             try {
-                utils.updateStatus(`Fetching conversations (offset: ${offset})...`);
+                const currentBatch = {
+                    start: offset,
+                    end: offset + limit
+                };
+                
+                const progressMsg = totalItems 
+                    ? `Fetching ${currentBatch.start}-${currentBatch.end} records of ${totalItems}...`
+                    : `Fetching ${currentBatch.start}-${currentBatch.end} records...`;
+                utils.updateStatus(progressMsg);
                 
                 const response = await fetch(
                     `https://chatgpt.com/backend-api/conversations?offset=${offset}&limit=${limit}&order=updated`,
@@ -39,7 +47,9 @@ class DataFetcher {
 
                 allConversations = allConversations.concat(data.items);
                 
-                if (data.items.length < limit || offset + limit >= 400) {
+                utils.updateStatus(`${currentBatch.start}-${currentBatch.end} records fetched successfully.`);
+                
+                if (data.items.length < limit || offset + limit >= 500) {
                     hasMore = false;
                 } else {
                     offset += limit;
@@ -47,6 +57,7 @@ class DataFetcher {
 
             } catch (error) {
                 console.error(`Failed to fetch offset ${offset}:`, error);
+                utils.updateStatus(`${offset}-${offset + limit} records fetching failed.`);
                 failedRequests.push(offset);
                 offset += limit;
                 

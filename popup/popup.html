@@ -6,10 +6,13 @@
 </head>
 <body>
     <div class="container">
+        <h1>ChatGPT History Export</h1>
         <div class="input-group">
-            <label for="tokenInput">Access Token:</label>
-            <input type="password" id="tokenInput" placeholder="Paste your access token here">
-            <button id="showTokenBtn" class="small-btn">Show</button>
+            <label for="tokenInput">Bearer Token:</label>
+            <div class="token-input-container">
+                <input type="password" id="tokenInput" placeholder="Paste your bearer token here, do not include Bearer">
+                <button id="showTokenBtn" class="small-btn">Show</button>
+            </div>
         </div>
         <div class="help-text">
             <p>To get your token:</p>
@@ -18,7 +21,7 @@
                 <li>Press F12 to open DevTools</li>
                 <li>Go to Network tab</li>
                 <li>Find any request to 'conversations'</li>
-                <li>Copy the Bearer token from Authorization header</li>
+                <li>Copy the Bearer token from Authorization header. Do not include 'Bearer'.</li>
             </ol>
         </div>
         <div id="dataControls">

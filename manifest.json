@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT Conversation Heatmap",
+  "name": "ChatGPT Conversation Exporter",
   "version": "1.0",
-  "description": "Generate a heatmap of your ChatGPT conversations",
+  "description": "Export your ChatGPT conversations to a CSV file",
   "permissions": [
       "storage",
       "activeTab",

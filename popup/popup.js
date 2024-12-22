@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 'Download Processed Data'
             ));
         } else {
-            existingDataInfo.innerHTML = '<p>No existing data found. Generate new data to create a heatmap.</p>';
+            existingDataInfo.innerHTML = '<p>Click the button to export your conversations.</p>';
             clearDataButton.classList.add('hidden');
             downloadButtonsContainer.innerHTML = '';
         }
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         try {
             const accessToken = tokenInput.value.trim();
             if (!accessToken) {
-                throw new Error('Please enter an access token');
+                throw new Error('Please enter your bearer token');
             }
 
             generateButton.disabled = true;
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             // Update UI with new data
             await updateUIWithExistingData();
 
-            utils.updateStatus('Heatmap generated successfully!');
+            utils.updateStatus('Data fetched successfully!');
 
         } catch (error) {
             console.error('Error:', error);
