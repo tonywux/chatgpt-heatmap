@@ -6,6 +6,9 @@
 
 <img src="./images/screenshot_result.png" width="300" alt="screenshot_result"/>
 
+Download here: [ChatGPT Conversation List Exporter](./file/chatgpt-heatmap.zip)
+
+> Note: This is a Chrome extension, you need to install it in Chrome Developer Mode.
 
 ## Introduction
 
