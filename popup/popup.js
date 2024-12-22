@@ -31,14 +31,10 @@ document.addEventListener('DOMContentLoaded', async function() {
                 `chatgpt-processed-data-${utils.getTimestamp()}.json`,
                 'Download Processed Data'
             ));
-
-            // Render existing heatmap
-            HeatmapGenerator.render(processedData);
         } else {
             existingDataInfo.innerHTML = '<p>No existing data found. Generate new data to create a heatmap.</p>';
             clearDataButton.classList.add('hidden');
             downloadButtonsContainer.innerHTML = '';
-            document.getElementById('heatmap-container').innerHTML = '';
         }
     }
 
