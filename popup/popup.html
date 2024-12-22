@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Conversation Exporter</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="tokenInput">Access Token:</label>
+            <input type="password" id="tokenInput" placeholder="Paste your access token here">
+            <button id="showTokenBtn" class="small-btn">Show</button>
+        </div>
+        <div class="help-text">
+            To get your token:
+            <ol>
+                <li>Open ChatGPT in your browser</li>
+                <li>Press F12 to open DevTools</li>
+                <li>Go to Network tab</li>
+                <li>Find any request to 'conversations'</li>
+                <li>Copy the Bearer token from Authorization header</li>
+            </ol>
+        </div>
+        <button id="exportButton">Export Conversations</button>
+        <div id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

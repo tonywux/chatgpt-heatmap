@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Conversation Fetcher",
+    "version": "1.0",
+    "description": "Export ChatGPT conversations as JSON",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "downloads"
+    ],
+    "host_permissions": [
+      "https://chatgpt.com/*",
+      "https://chat.openai.com/*"
+    ],
+    "action": {
+      "default_popup": "/popup/popup.html",
+      "default_icon": "/images/icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
