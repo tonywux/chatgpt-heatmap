@@ -1,6 +1,6 @@
 # chatgpt-heatmap
 
-![screenshot](./images/screenshot.png)
+<img src="./images/screenshot.png" width="600" alt="screenshot"/>
 
 ## 中文使用指引 (English Guides below)
 
