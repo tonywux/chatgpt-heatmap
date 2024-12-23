@@ -1,36 +1,87 @@
+/* General Element Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Container Styles */
 .container {
-    padding: 20px;
+    padding: 10px;
     width: 400px;
 }
 
+/* Input and Input Group Styles */
 .input-group {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .input-group input {
     flex-grow: 1;
+    padding-left: 5px;
+    height: 30px;
 }
 
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.token-input-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+/* Help Text */
 .help-text {
-    font-size: 0.9em;
-    margin-bottom: 15px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    padding: 4px;
 }
 
+.help-text p {
+    margin: 4px;
+}
+
+.help-text ol {
+    padding-left: 20px;
+    margin-bottom: 4px;
+}
+
+/* Button Styles */
 button {
     width: 100%;
     padding: 8px;
-    margin: 5px 0;
 }
 
 .small-btn {
     width: auto;
 }
 
-#status {
+.button-group {
+    display: flex;
+    gap: 10px;
     margin: 10px 0;
-    color: #666;
+}
+
+.button-group button {
+    flex: 1;
 }
 
 .download-buttons {
@@ -48,52 +99,31 @@ button {
     cursor: pointer;
 }
 
-.existing-data-info {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-}
-
-.button-group {
-    display: flex;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.button-group button {
-    flex: 1;
-}
-
 .danger-btn {
     background-color: #dc3545;
     color: white;
     border: none;
+    border-radius: 2px;
 }
 
 .danger-btn:hover {
     background-color: #c82333;
 }
 
-.hidden {
-    display: none;
+/* Status and Information Styles */
+#status {
+    margin: 10px 0;
+    color: #666;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+.existing-data-info {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
 
-.token-input-container {
-    display: flex;
-    gap: 8px;
-    margin-top: 5px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
+.existing-data-info p {
+    margin: 5px;
 }
 
 .security-notice {

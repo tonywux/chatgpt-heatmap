@@ -1,14 +1,14 @@
-# chatgpt-heatmap
+# ChatGPT Conversation List Exporter
 
 ## Screenshot
 
-<img src="./images/screenshot.png" width="300" alt="screenshot"/>
-
-<img src="./images/screenshot_result.png" width="300" alt="screenshot_result"/>
-
-Download here: [ChatGPT Conversation List Exporter](./file/chatgpt-heatmap.zip)
-
 > Note: This is a Chrome extension, you need to install it in Chrome Developer Mode.
+
+<img src="./images/intro.png" alt="intro"/>
+
+Download here: [ChatGPT Conversation List Exporter](./file/chatgpt-heatmap_1.1.zip)
+
+---
 
 ## Introduction
 
@@ -162,3 +162,10 @@ This tool supports exporting two types of conversation data from your ChatGPT ac
 ## Roadmap
 
 - 支持直接制作热力图（heatmap）
+
+---
+
+## Change Log
+
+- 1.1 (Dec 23, 2024): Update popup UI and icons
+- 1.0 (Dec 22, 2024): Initial release

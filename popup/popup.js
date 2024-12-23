@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         if (rawData && processedData && generationDate) {
             existingDataInfo.innerHTML = `
-                <p>Existing data found from: ${new Date(generationDate).toLocaleString()}</p>
+                <p>Last fetch time: ${new Date(generationDate).toLocaleString()}</p>
                 <p>Total conversations: ${rawData.totalCount}</p>
             `;
             clearDataButton.classList.remove('hidden');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 'Download Processed Data'
             ));
         } else {
-            existingDataInfo.innerHTML = '<p>Click the button to export your conversations.</p>';
+            existingDataInfo.innerHTML = '<p>Click the button to export your conversations.</p> <p>Keep the extension open until the data is fetched.</p>';
             clearDataButton.classList.add('hidden');
             downloadButtonsContainer.innerHTML = '';
         }
